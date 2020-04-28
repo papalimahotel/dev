@@ -1,13 +1,18 @@
 version: "3.7"
 services:
   php-apache:
-    image: php:7.4.4-apache
+    image: php:7.4-apache
     ports:
       - 80:80
       - 443:443
     volumes:
-      - ./sites:/var/www
-      - ./config/apache2:/etc/apache2
-      - ./config/php:/etc/php
+      # VHost Document Root location
+      - ./sites:/var/www/html
+      # SSL Certs & Keys
+      - ./config/SSL:/etd/apache2/SSL
+      # VHosts Dir
+      - ./config/vhosts:/etc/apache2/sites-enabled
+      # PHP ini
+      - ./config/php/php-ini:/etc/php/7.4/apache2/php.ini
 #    links:
 #      - 'mariadb'
