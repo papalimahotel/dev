@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  php-apache:
+    image: php:7.4.4-apache
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./sites:/var/www
+      - ./config/apache2:/etc/apache2
+      - ./config/php:/etc/php
+#    links:
+#      - 'mariadb'
