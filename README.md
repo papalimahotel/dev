@@ -1,6 +1,6 @@
-dev
+web-stack
 ===
-**dev** is a containerized bundle for a LAMP stack for web development.  The goal is to have a bundle that portable and platform agnostic.  
+**web-stack** is a containerized bundle for a LAMP stack for web projects.  The goal is to have a bundle that portable and platform agnostic.  
 
 ## Technology
 * Ubuntu v18.04
